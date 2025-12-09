@@ -1,25 +1,46 @@
-import pandas as pandas
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
 import pickle
 import os
 
-def train_and_save(csv_path="./heart.xls", path="app_backend/model/heart.pkl"):
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+def train_and_save():
+    # Nota: Se der erro de leitura, verifique se o arquivo está na mesma pasta onde você roda o comando
+    csv_path = "heart.xls"  
+    model_path = "app_backend/model/heart.pkl"
 
-    df = pandas.read_csv(csv_path)
+    # Criar pasta para salvar o modelo, se não existir
+    os.makedirs(os.path.dirname(model_path), exist_ok=True)
 
-    X = df.drop('nome_da_coluna_alvo', axis=1) 
-    y = df['nome_da_coluna_alvo']
+    print(f"Lendo dados de: {csv_path}...")
+    try:
+        
+        df = pd.read_csv(csv_path)
+    except FileNotFoundError:
+        print(f"ERRO CRÍTICO: Não achei o arquivo '{csv_path}'.")
+        print("Verifique se você está rodando o terminal na pasta raiz do projeto.")
+        return
+    except Exception as e:
+        print(f"Erro ao ler o arquivo: {e}")
+        return
 
+    # 2. Separar as colunas (X) e o alvo (y)
+    # Garante que usamos a coluna 'target' como objetivo
+    if 'target' not in df.columns:
+        print("ERRO: O arquivo não tem a coluna 'target'. Verifique os dados.")
+        return
 
-    # Modelo utilizado: Random Forest
-    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    X = df.drop('target', axis=1)
+    y = df['target']
+
+    # 3. Treinar a Árvore de Decisão (Decision Tree)
+    print("Treinando o modelo de Árvore de Decisão...")
+    model = DecisionTreeClassifier(criterion='entropy', random_state=42)
     model.fit(X, y)
-    # Salva no formato pickle
-    with open(path, "wb") as f:
-        pickle.dump(model, f)
-    print(f"Modelo treinado e salvo em: {path}")
 
-if name == "main":
+    # 4. Salvar o modelo pronto
+    with open(model_path, "wb") as f:
+        pickle.dump(model, f)
+    print(f"Sucesso! Modelo salvo em: {model_path}")
+
+if __name__ == "__main__":
     train_and_save()
