@@ -2,7 +2,7 @@
 
 **Nome do projeto:** Classification-of-Heart-Disease-Risk-using-Machine-Learning
 
-**Equipe / Alunos envolvidos:** Clebson, Nicolas Klayvert, Diego, Sérgio, Leonardo, Miguel 👥
+**Equipe / Alunos envolvidos:** Clebson Alexandre, Nicolas Klayvert, Diego Luiz, Sérgio Roberto, Leonardo abtobio, josé Miguel
 
 **Contexto da atividade:** Projeto acadêmico da disciplina — usando o conjunto de dados sorteado, foi solicitado que cada equipe construísse uma aplicação completa (Front-End, Back-End e modelo de IA) para resolver um problema de classificação.
 
@@ -26,8 +26,6 @@
 
 * **Python** — para pré-processamento e modelagem de ML.
 * **Bibliotecas de ciência de dados / ML** (ex: `pandas`, `scikit-learn`, `numpy`) — manipulação de dados, treinamento e avaliação do modelo.
-* **Framework web para backend** (ex: `Flask`) — para expor o modelo e receber os dados da interface.
-* **Frontend web** (HTML / CSS / JavaScript) — para criar interface interativa e amigável para o usuário.
 * **Ambiente virtual / requirements.txt** — para gerenciar dependências e garantir reprodutibilidade do ambiente.
 
 ---
@@ -52,3 +50,10 @@ Mas imagino que a interface funcione assim: um formulário web para inserir dado
 ## Conclusão
 
 O trabalho realizado pela equipe compila bem a teoria com a prática: um problema real (risco cardíaco), uso de ML, e a criação de uma aplicação funcional que entrega uma predição de risco a partir de dados de paciente.
+
+## ##  Colaboradores 🕴️
+
+Este projeto é o resultado do trabalho e da dedicação de uma equipe incrível. Conheça quem fez o **TripMaster** acontecer:
+
+<table> <tr> <td align="center"> <a href="https://github.com/leonard0antonio"> <img src="https://github.com/leonard0antonio.png" width="100px;" alt="Foto de Leonardo Antonio no GitHub"/> <br /> <sub><b>Leonardo Antonio</b></sub> </a> </td> <td align="center"> <a href="https://github.com/ClebsAlexandre"> <img src="https://github.com/ClebsAlexandre.png" width="100px;" alt="Foto de Clebson no GitHub"/> <br /> <sub><b>Clebson Alexandre </b></sub> </a> </td> <td align="center"> <a href="https://github.com/nicolasklayvert"> <img src="https://github.com/nicolasklayvert.png" width="100px;" alt="Foto de Nicolas Klayvert no GitHub"/> <br /> <sub><b>Nicolas Klayvert</b></sub> </a> </td> <td align="center"> <a href="https://github.com/DiegoL13"> <img src="https://github.com/DiegoL13.png" width="100px;" alt="Foto de Diego Luiz no GitHub"/> <br /> <sub><b>Diego Luiz</b></sub> </a> </td> <td align="center"> <a href="https://github.com/SergioRoberto-DEV"> <img src="https://github.com/SergioRoberto-DEV.png" width="100px;" alt="Foto de Sérgio Roberto no GitHub"/> <br /> <sub><b>Sérgio Roberto</b></sub> </a> </td> <td align="center"> <a href="https://github.com/MiguelOlivieira"> <img src="https://github.com/MiguelOlivieira.png" width="100px;" alt="Foto de José Miguel no GitHub"/> <br /> <sub><b>José Miguel</b></sub> </a> </td> </tr> </table>
+
