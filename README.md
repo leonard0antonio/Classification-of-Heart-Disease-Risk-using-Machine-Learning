@@ -146,6 +146,8 @@ A interface abrirá no navegador automaticamente.
 
 # 📸 Capturas de Tela
 
+<img src="https://drive.google.com/uc?export=view&id=12D-1ncQthp0xOMNk_DtZShIiJ98fTXn1" width="500px" />
+
 
 ---
 
