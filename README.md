@@ -26,7 +26,7 @@
 
 * **Python** — para pré-processamento e modelagem de ML.
 * **Bibliotecas de ciência de dados / ML** (ex: `pandas`, `scikit-learn`, `numpy`) — manipulação de dados, treinamento e avaliação do modelo.
-* **Framework web para backend** (ex: `Flask` ou similar) — para expor o modelo e receber os dados da interface.
+* **Framework web para backend** (ex: `Flask`) — para expor o modelo e receber os dados da interface.
 * **Frontend web** (HTML / CSS / JavaScript) — para criar interface interativa e amigável para o usuário.
 * **Ambiente virtual / requirements.txt** — para gerenciar dependências e garantir reprodutibilidade do ambiente.
 
