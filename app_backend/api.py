@@ -53,7 +53,7 @@ def riskpredict(data: ClinicalUserInput):
         data.cp,
         data.trestbps,
         data.chol,
-        data.fbs,      # <--- Corrigido: O original esquecia esse campo
+        data.fbs,      
         data.restecg,
         data.thalach,
         data.exang,
