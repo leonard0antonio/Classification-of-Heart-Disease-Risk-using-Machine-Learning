@@ -5,7 +5,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from .model_util import load_model, predict_instance
 import os
 
-# Cria o app FastAPI
 app = FastAPI(title="API de Risco Cardíaco")
 
 # Permite que o Streamlit converse com esse servidor
@@ -38,16 +37,19 @@ class HeartRiskPredictionResponse(BaseModel):
     confidence: float
 
 # Carrega o modelo assim que o servidor liga
-MODEL_PATH = "app_backend/model/arvore_decisao_classificador_model.pkl"
+MODEL_PATH = "app_backend/model/arvore_decisao_classificador_HeartDiseaseRisk.pkl"
 model = load_model(MODEL_PATH)
 
-# Rota de predição
+@app.get("/")
+def read_root():
+    return {"message": "Classification of Heart Disease Risk API. POST to /riskpredict com as medidas que constam neste dataset = 'https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset/data'"}
+
 @app.post("/riskpredict", response_model=HeartRiskPredictionResponse)
 def riskpredict(data: ClinicalUserInput):
     if not model:
         raise HTTPException(status_code=500, detail="Modelo de IA não carregado (arquivo .pkl faltando)")
 
-    # Monta a lista na ordem EXATA que foi usada no treinamento (heart.csv)
+    
     # ATENÇÃO: Se mudar a ordem aqui, a IA erra tudo!
     x = [
         data.age,
